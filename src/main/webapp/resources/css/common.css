@@ -1,0 +1,230 @@
+/* margin */
+.mt10 {margin-top: 10px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mt40 {margin-top: 40px;}
+.mt50 {margin-top: 50px;}
+.mb10 {margin-bottom: 10px;}
+.mb20 {margin-bottom: 20px;}
+.mb30 {margin-bottom: 30px;}
+.mb40 {margin-bottom: 40px;}
+.mb50 {margin-bottom: 50px;}
+.ml10 {margin-left: 10px;}
+.ml20 {margin-left: 20px;}
+.ml30 {margin-left: 30px;}
+.ml40 {margin-left: 40px;}
+.ml50 {margin-left: 50px;}
+.mr10 {margin-right: 10px;}
+.mr20 {margin-right: 20px;}
+.mr30 {margin-right: 30px;}
+.mr40 {margin-right: 40px;}
+.mr50 {margin-right: 50px;}
+
+/* padding */
+.pt10 {padding-top: 10px;}
+.pt20 {padding-top: 20px;}
+.pt30 {padding-top: 30px;}
+.pt40 {padding-top: 40px;}
+.pt50 {padding-top: 50px;}
+.pb10 {padding-bottom: 10px;}
+.pb20 {padding-bottom: 20px;}
+.pb30 {padding-bottom: 30px;}
+.pb40 {padding-bottom: 40px;}
+.pb50 {padding-bottom: 50px;}
+.pl10 {padding-left: 10px;}
+.pl20 {padding-left: 20px;}
+.pl30 {padding-left: 30px;}
+.pl40 {padding-left: 40px;}
+.pl50 {padding-left: 50px;}
+.pr10 {padding-right: 10px;}
+.pr20 {padding-right: 20px;}
+.pr30 {padding-right: 30px;}
+.pr40 {padding-right: 40px;}
+.pr50 {padding-right: 50px;}
+
+/* display */
+.d-flex {
+    display: flex;
+}
+.justifyBetween {
+    justify-content: space-between;
+}
+.alignCenter {
+    align-items: center;
+}
+.textLeft {
+    text-align: center !important;
+}
+.textCenter {
+    text-align: center !important;
+}
+.textRight {
+    text-align: right !important;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+.section {
+    width: 1280px;
+    height: calc(100vh - 175px);
+    margin: 0 auto;
+}
+/* header */
+.header {
+    width: 100%; 
+    justify-content: space-between;
+    align-items: center;
+    background: #454545;
+    color: #fff;
+}
+.header .nav{
+    display: flex; 
+    height: 60px;
+    /* padding: 15px 0;  */
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1 a {
+    font-size: 24px;
+    color: #fff;
+}
+.header ul {
+    display: flex;
+}
+.header li a, .header li span {
+    display: inline-block;
+    margin-right: 20px;
+    color: #fff;
+}
+.header li:last-child a{
+    margin-right: 0;
+}
+
+/* footer */
+.footer {
+    height: 100px;
+    background: #aaa;
+}
+
+/* 검색영역 */
+.seachForm {
+    display: flex;
+    padding-bottom: 8px;
+    margin: 10px 0;
+    border-bottom: 1px solid #000;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.seachForm .right form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: inline-block;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #555;
+    color: #fff;
+}
+
+/* 버튼 그룹 */
+.btnGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btnGroup a, .btnGroup button {
+    display: inline-block;
+    width: 90px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.btnGroup button {
+    background: #555;
+    color: #fff;
+}
+.btnGroup button:hover {
+    background: #000;
+}
+.btnGroup a:hover {
+    background: #333;
+    color: #fff;
+}   
+.primaryBtn, .secondBtn, .primaryBorderBtn, .secondBorderBtn, .deleteBorderBtn {
+    display: inline-block;
+    padding: 5px 15px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+.primaryBtn {
+    background: #587be3;
+}
+.secondBtn {
+    background: #555;
+}
+.secondBorderBtn{
+    background: none;
+    border: 1px solid #555;
+    color: #555;
+}
+.secondBorderBtn:hover {
+    background: #555;
+    color: #fff;
+}
+.primaryBorderBtn {
+    background: none;
+    border: 1px solid #587be3;
+    color: #587be3;
+}
+.primaryBorderBtn:hover {
+    background: #587be3;
+    color: #fff;
+}
+.deleteBorderBtn {
+    background: none;
+    border: 1px solid red;
+    color: red;
+}
+.deleteBorderBtn:hover {
+    background: red;
+    color: #fff;
+}
+
+/* 서브 타이틀 */
+.subTitle {
+    margin: 15px 0;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/* 테이블 */
+.tblWrap {
+    width: 100%;
+    text-align: center;
+}
+.tblWrap th, .tblWrap td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}

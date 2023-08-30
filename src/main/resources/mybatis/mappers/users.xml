@@ -17,7 +17,7 @@
         FROM
             USERS
         WHERE
-            USER_ID = #{id}
+            USER_ID = #{value}
     </select>
 
     <!-- 회원가입  -->
@@ -27,5 +27,14 @@
             (USER_ID, USER_PASSWORD, USER_NAME, USER_EMAIL, USER_TEL)
         VALUES
             (#{id}, #{password}, #{name}, #{email}, #{tel})
+    </insert>
+    
+    <!-- 유저 권한 추가 -->
+    <insert id="insertUserRole" parameterType="string">
+        /* insertUserRole sql*/
+    	INSERT INTO USER_ROLES
+    		(USER_ID, USER_ROLE)
+    	VALUES
+    		(#{value}, 'USER')
     </insert>
 </mapper>

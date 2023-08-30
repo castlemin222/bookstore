@@ -28,13 +28,16 @@ public class UserService {
     // 회원가입
     public void insertUser(Map<String, String> param) throws Exception {
         log.info("================= register param : {}", param);
-    	Map<String, Object> userInfo = userMapper.getUserId(param.get("id"));
+    	// id로 유정정보 조회
+        Map<String, Object> userInfo = userMapper.getUserId(param.get("id"));
+    	// 중복된 id가 있는지 체크 
     	if (userInfo != null) {
     		throw new Exception();
     	}
-    	
+    	// 비밀번호 암호화
     	param.put("password", passwordEncoder.encode(param.get("password"))); 
     	
     	userMapper.insertUser(param);
+    	userMapper.insertUserRole(param.get("id"));
     }
 }

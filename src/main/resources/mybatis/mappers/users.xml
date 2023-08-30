@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bookstore.user.mapper.UserMapper">
+
+    <!--  유저 아이디로 유저 정보 조회  -->
+    <select id="getUserId" parameterType="string" resultType="map">
+        /* getUserId sql */
+        SELECT
+            USER_ID,
+            USER_PASSWORD,
+            USER_NAME,
+            USER_EMAIL,
+            USER_EMAIL,
+            USER_ENABLED,
+            USER_CREATED_DATE,
+            USER_UPDATED_DATE
+        FROM
+            USERS
+        WHERE
+            USER_ID = #{value}
+    </select>
+
+    <!-- 회원가입  -->
+    <insert id="insertUser">
+        /* insertUser sql*/
+        INSERT INTO USERS
+            (USER_ID, USER_PASSWORD, USER_NAME, USER_EMAIL, USER_TEL)
+        VALUES
+            (#{id}, #{password}, #{name}, #{email}, #{tel})
+    </insert>
+    
+    <!-- 유저 권한 추가 -->
+    <insert id="insertUserRole" parameterType="string">
+        /* insertUserRole sql*/
+    	INSERT INTO USER_ROLES
+    		(USER_ID, USER_ROLE)
+    	VALUES
+    		(#{value}, 'USER')
+    </insert>
+</mapper>

@@ -4,7 +4,7 @@
     display: flex;
     background: #ccc;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
 }
 
 .mainChoice {
@@ -18,7 +18,8 @@
     text-align: center;
     line-height: 20vw;
 }
-.choiceBox a{
+
+.choiceBox a {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -30,13 +31,14 @@
 
 /* 회원가입 폼 */
 .registerForm {
-    width: 30%;
+    width: 45%;
     height: 400px;
     margin: 30px auto;
     padding: 10px 15px;
     border: 1px solid #aaa;
     border-radius: 10px;
 }
+
 .registerForm .rowForm {
     width: 100%;
     display: flex;
@@ -57,6 +59,7 @@
     width: 65%;
     padding: 10px 0;
     border: 1px solid #ccc;
+    border-radius: 0px;
 }
 
 /* 도서 목록 */
@@ -65,7 +68,8 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.bookBorder{
+
+.bookBorder {
     display: inline-block;
     width: 19%;
     padding: 10px 15px;
@@ -74,6 +78,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .bookBorder:nth-child(5n) {
     margin-right: 0;
 }
@@ -134,27 +139,33 @@
     border-bottom: 1px solid #ccc;
     justify-content: space-between;
 }
+
 .detailImg {
     width: 30%;
     text-align: center;
 }
+
 .detailInfo {
     width: 50%;
 }
+
 .detailInfo .detailTitle {
     font-size: 21px;
     margin-bottom: 10px;
 }
+
 .detailInfo .deatilDescription {
     font-size: 14px;
     color: #888;
     margin-bottom: 5px;
 }
+
 .detailInfo .detailAuthor {
     display: inline-block;
     position: relative;
     padding-right: 10px;
 }
+
 .detailInfo .detailAuthor::before {
     display: block;
     content: "";
@@ -165,26 +176,32 @@
     top: 5px;
     right: 0;
 }
+
 .detailInfo .detailPublisher {
     display: inline-block;
 }
+
 .detailInfo .detailPrice {
     display: flex;
     align-items: center;
     margin: 5px 0 10px 0;
 }
+
 .detailInfo .detailPrice .originalPrice {
     font-size: 14px;
     color: #ccc;
     text-decoration: line-through;
 }
+
 .detailInfo .detailPrice .discountPrice {
     font-size: 18px;
     color: red;
 }
+
 .detailChoice {
     width: 20%;
 }
+
 .detailChoice .amount {
     padding: 5px 0;
     margin-bottom: 30px;
@@ -194,6 +211,7 @@
     border-radius: 5px;
     text-align: center;
 }
+
 .detailChoice .amount button {
     position: absolute;
     width: 40px;
@@ -202,22 +220,26 @@
     color: #000;
     border: none;
 }
+
 .detailChoice .amount button:hover {
     background: #555;
     color: #fff;
 }
+
 .detailChoice .amount .minus {
     top: 0;
     left: 0;
     border-right: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
 }
+
 .detailChoice .amount .plus {
     top: 0;
     right: 0;
     border-left: 1px solid #ccc;
     border-radius: 0 5px 5px 0;
 }
+
 .detailChoice .detailBtn a {
     display: inline-block;
     padding: 9px 20px;
@@ -226,6 +248,7 @@
     text-align: center;
     border-radius: 5px;
 }
+
 /* 리뷰 */
 .reviewWrap {
     display: flex;
@@ -233,10 +256,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .reviewWrap .subTitle {
     width: 100%;
     font-size: 18px;
 }
+
 .reviewWrap .reviewBox {
     width: 48%;
     margin-bottom: 10px;
@@ -244,7 +269,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.reviewWrap .reviewBox .reviewHeader{
+
+.reviewWrap .reviewBox .reviewHeader {
     display: flex;
     margin-bottom: 10px;
     padding-bottom: 10px;
@@ -252,6 +278,7 @@
     align-items: center;
     border-bottom: 1px solid #eee;
 }
+
 /* 장바구니 */
 .cartWrap .shoppingBtn {
     margin-top: 50px;

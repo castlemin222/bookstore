@@ -1,0 +1,78 @@
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, address, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, select, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+img, fieldset {
+    border: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+address, em {
+    font-style: normal;
+}
+
+li img, object {
+    vertical-align: top;
+}
+
+input, select, textarea {
+    vertical-align: middle;
+}
+
+a, button {
+    outline: 0;
+    text-decoration: none;
+    border: none;
+    color: #444;
+    cursor: pointer;
+}
+
+body {
+    font-size: 16px;
+    font-family: "NanumSquare", sans-serif;
+    color: #444;
+}
+
+.noMargin {
+    margin: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+
+.floatClear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+.blind {
+    display: block;
+    text-indent: -2000px;
+    overflow: hidden;
+}

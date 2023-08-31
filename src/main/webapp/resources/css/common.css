@@ -154,11 +154,12 @@ button {
 
 .btnGroup a, .btnGroup button {
     display: inline-block;
-    width: 90px;
-    height: 35px;
-    line-height: 35px;
+    width: 100px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     border: 1px solid #ccc;
     background: #fff;
+    text-align: center;
 }
 .btnGroup button {
     background: #555;
@@ -179,10 +180,10 @@ button {
     border-radius: 5px;
 }
 .primaryBtn {
-    background: #587be3;
+    background: #587be3 !important;
 }
 .secondBtn {
-    background: #555;
+    background: #555 !important; 
 }
 .secondBorderBtn{
     background: none;

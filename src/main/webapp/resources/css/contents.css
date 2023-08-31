@@ -1,44 +1,48 @@
+/* 홈 화면 */
 .main {
     width: 100%;
     height: calc(100vh - 160px);
     display: flex;
-    background: #ccc;
+    position: relative;
     justify-content: center;
-    align-items: center;
+    align-items: center ;
+}
+.loginFormBox {
+    width: 500px;
+    height: 300px;
+    background: #fbf9f9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-shadow: 0px 2px 20px 5px #dedddd;
+}
+.loginFormBox .loginForm {
+    padding: 20px 30px;
+
+}
+.loginFormBox .loginForm .inputBox {
+    width: 100%;
+    height: 40px;
 }
 
-.mainChoice {
-    display: flex;
-}
-
-.choiceBox {
-    width: 20vw;
-    height: 20vw;
-    background: #fff;
-    text-align: center;
-    line-height: 20vw;
-}
-
-.choiceBox a {
-    display: inline-block;
+.mainBackgound{
     width: 100%;
     height: 100%;
-}
-
-.choiceBox.store {
-    margin-right: 20px;
+    background:url("../img/main.jpg") no-repeat center center / cover;
+    opacity: 0.5;
 }
 
 /* 회원가입 폼 */
 .registerForm {
-    width: 45%;
+    width: 30%;
     height: 400px;
     margin: 30px auto;
     padding: 10px 15px;
     border: 1px solid #aaa;
     border-radius: 10px;
 }
-
 .registerForm .rowForm {
     width: 100%;
     display: flex;
@@ -59,7 +63,6 @@
     width: 65%;
     padding: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 0px;
 }
 
 /* 도서 목록 */
@@ -68,8 +71,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
-
-.bookBorder {
+.bookBorder{
     display: inline-block;
     width: 19%;
     padding: 10px 15px;
@@ -78,7 +80,6 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 .bookBorder:nth-child(5n) {
     margin-right: 0;
 }
@@ -139,33 +140,27 @@
     border-bottom: 1px solid #ccc;
     justify-content: space-between;
 }
-
 .detailImg {
     width: 30%;
     text-align: center;
 }
-
 .detailInfo {
     width: 50%;
 }
-
 .detailInfo .detailTitle {
     font-size: 21px;
     margin-bottom: 10px;
 }
-
 .detailInfo .deatilDescription {
     font-size: 14px;
     color: #888;
     margin-bottom: 5px;
 }
-
 .detailInfo .detailAuthor {
     display: inline-block;
     position: relative;
     padding-right: 10px;
 }
-
 .detailInfo .detailAuthor::before {
     display: block;
     content: "";
@@ -176,32 +171,26 @@
     top: 5px;
     right: 0;
 }
-
 .detailInfo .detailPublisher {
     display: inline-block;
 }
-
 .detailInfo .detailPrice {
     display: flex;
     align-items: center;
     margin: 5px 0 10px 0;
 }
-
 .detailInfo .detailPrice .originalPrice {
     font-size: 14px;
     color: #ccc;
     text-decoration: line-through;
 }
-
 .detailInfo .detailPrice .discountPrice {
     font-size: 18px;
     color: red;
 }
-
 .detailChoice {
     width: 20%;
 }
-
 .detailChoice .amount {
     padding: 5px 0;
     margin-bottom: 30px;
@@ -211,7 +200,6 @@
     border-radius: 5px;
     text-align: center;
 }
-
 .detailChoice .amount button {
     position: absolute;
     width: 40px;
@@ -220,26 +208,22 @@
     color: #000;
     border: none;
 }
-
 .detailChoice .amount button:hover {
     background: #555;
     color: #fff;
 }
-
 .detailChoice .amount .minus {
     top: 0;
     left: 0;
     border-right: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
 }
-
 .detailChoice .amount .plus {
     top: 0;
     right: 0;
     border-left: 1px solid #ccc;
     border-radius: 0 5px 5px 0;
 }
-
 .detailChoice .detailBtn a {
     display: inline-block;
     padding: 9px 20px;
@@ -248,7 +232,6 @@
     text-align: center;
     border-radius: 5px;
 }
-
 /* 리뷰 */
 .reviewWrap {
     display: flex;
@@ -256,12 +239,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 .reviewWrap .subTitle {
     width: 100%;
     font-size: 18px;
 }
-
 .reviewWrap .reviewBox {
     width: 48%;
     margin-bottom: 10px;
@@ -269,8 +250,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
-.reviewWrap .reviewBox .reviewHeader {
+.reviewWrap .reviewBox .reviewHeader{
     display: flex;
     margin-bottom: 10px;
     padding-bottom: 10px;
@@ -278,7 +258,6 @@
     align-items: center;
     border-bottom: 1px solid #eee;
 }
-
 /* 장바구니 */
 .cartWrap .shoppingBtn {
     margin-top: 50px;

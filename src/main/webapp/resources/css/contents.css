@@ -30,18 +30,25 @@
 .mainBackgound{
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     background:url("../img/main.jpg") no-repeat center center / cover;
     opacity: 0.5;
+    text-indent: -9999rem;
+    z-index: -10;
 }
 
 /* 회원가입 폼 */
 .registerForm {
     width: 30%;
-    height: 400px;
+    height: 450px;
     margin: 30px auto;
     padding: 10px 15px;
-    border: 1px solid #aaa;
-    border-radius: 10px;
+    background: #fbf9f9;
+    border-radius: 10px;    
+    z-index: 10;
+    box-shadow: 0px 2px 20px 5px #dedddd
 }
 .registerForm .rowForm {
     width: 100%;

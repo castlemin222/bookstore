@@ -31,7 +31,7 @@ public class CustomUserDetails extends LoginUser implements UserDetails{
 	}
 
 	@Override
-	// 사용자이름(사용자아이디, 이메일, 사원번호, 학생번호 애플리케이션에 따라서 다르다.)
+	// 사용자이름
 	public String getUsername() {
 		return getId();
 	}

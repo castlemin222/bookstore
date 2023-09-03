@@ -18,7 +18,7 @@ import com.bookstore.user.mapper.UserMapper;
 public class CustomUserDetailsService implements UserDetailsService{
 
 	@Autowired
-	UserMapper userMapper;
+	private UserMapper userMapper;
 	
 	@Override
 	public UserDetails loadUserByUsername(String id) throws UsernameNotFoundException {

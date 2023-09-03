@@ -52,6 +52,8 @@
 .alignCenter {
     align-items: center;
 }
+
+/* text */
 .textLeft {
     text-align: center !important;
 }
@@ -62,13 +64,18 @@
     text-align: right !important;
 }
 
+/* width */
+.w100 {
+    width: 100% !important;
+}
+
 .container {
     width: 1280px;
     margin: 0 auto;
 }
 .section {
     width: 1280px;
-    height: calc(100vh - 175px);
+    height: calc(100vh - 160px);
     margin: 0 auto;
 }
 /* header */

@@ -27,7 +27,7 @@ public class UserService {
 
     // 회원가입
     public void insertUser(Map<String, String> param) throws Exception {
-        log.info("================= register param : {}", param);
+        log.info("================= register service param : {}", param);
     	// id로 유정정보 조회
         Map<String, Object> userInfo = userMapper.getUserId(param.get("id"));
     	// 중복된 id가 있는지 체크 

@@ -14,38 +14,43 @@
 
     <!-- contents 영역 -->
     <section class="section">
-        <div class="registerForm">
-            <form action="/user/register" method="post">
-                <div class="rowForm">
-                    <label>아이디</label>
-                    <input type="text" name="id">
-                </div>
-                <div class="rowForm">
-                    <label>비밀번호</label>
-                    <input type="password" name="password">
-                </div>
-                <div class="rowForm">
-                    <label>비밀번호 확인</label>
-                    <input type="password" name="confirmPassword">
-                </div>
-                <div class="rowForm">
-                    <label>이름</label>
-                    <input type="text" name="name">
-                </div>
-                <div class="rowForm">
-                    <label>이메일</label>
-                    <input type="email" name="email">
-                </div>
-                <div class="rowForm">
-                    <label>전화번호</label>
-                    <input type="text" name="tel">
-                </div>
-            </form>
-        </div>
-        <div class="btnGroup">
-            <a href="" class="mr10">취소</a>
-            <button id="submitForm">가입하기</button>
-        </div>
+	    <div class="main">
+	        <div class="w100">
+		        <div class="registerForm">
+		            <form action="/register" method="post">
+		                <div class="rowForm">
+		                    <label>아이디</label>
+		                    <input type="text" name="id">
+		                </div>
+		                <div class="rowForm">
+		                    <label>비밀번호</label>
+		                    <input type="password" name="password">
+		                </div>
+		                <div class="rowForm">
+		                    <label>비밀번호 확인</label>
+		                    <input type="password" name="confirmPassword">
+		                </div>
+		                <div class="rowForm">
+		                    <label>이름</label>
+		                    <input type="text" name="name">
+		                </div>
+		                <div class="rowForm">
+		                    <label>이메일</label>
+		                    <input type="email" name="email">
+		                </div>
+		                <div class="rowForm">
+		                    <label>전화번호</label>
+		                    <input type="text" name="tel">
+		                </div>
+				        <div class="btnGroup">
+				            <a href="" class="mr10">취소</a>
+				            <button id="submitForm">가입하기</button>
+				        </div>
+		            </form>
+		        </div>
+	        </div>
+	    </div>
+    	<div class="mainBackgound">배경이미지</div>
     </section>
 
     <!-- footer 영역 -->

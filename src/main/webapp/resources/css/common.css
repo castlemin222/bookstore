@@ -131,13 +131,13 @@
 }
 
 input {
-    padding: 5px 8px;
+    padding: 5px 8px !important;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 select {
-    padding: 5px 8px;
+    padding: 5px 8px !important;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -235,4 +235,36 @@ button {
 .tblWrap th, .tblWrap td {
     padding: 10px;
     border-bottom: 1px solid #ccc;
+}
+
+/* 페이징 관련 */
+.pagingWrap ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.pagingWrap li a{
+    display: inline-block;
+    margin: 0 5px;
+    padding: 4px 8px;
+    border: 1px solid #587be3;
+    color: #587be3;
+    border-radius: 4px;
+}
+
+.pagingWrap li a:hover {
+    background: #587be3;
+    color: #fff;
+}
+
+.pagingWrap .disabled {
+    border: 1px solid #ccc;
+    color: #ccc;
+    cursor: default;
+}
+.pagingWrap .disabled:hover {
+    background: #fff;
+    color: #ccc;
 }

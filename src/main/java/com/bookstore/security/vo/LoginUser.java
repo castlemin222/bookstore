@@ -1,0 +1,24 @@
+package com.bookstore.security.vo;
+
+
+public class LoginUser {
+
+	private String id;
+	private String encryptPassword;
+	private String name;
+	
+	public LoginUser(String id, String encryptPassword, String name) {
+		this.id = id;
+		this.encryptPassword = encryptPassword;
+		this.name = name;
+	}
+	public String getId() {
+		return id;
+	}
+	public String getEncryptPassword() {
+		return encryptPassword;
+	}
+	public String getName() {
+		return name;
+	}
+}

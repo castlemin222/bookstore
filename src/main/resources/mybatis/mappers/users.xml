@@ -29,6 +29,17 @@
             (#{id}, #{password}, #{name}, #{email}, #{tel})
     </insert>
     
+    <!-- 유저아이디로 권한 조회 -->
+    <select id="getUserRoleByUserId" parameterType="string" resultType="map">
+    	SELECT
+    		USER_ID,
+    		USER_ROLE
+    	FROM
+    		USER_ROLES
+    	WHERE
+    		USER_ID = #{value}
+    </select>
+    
     <!-- 유저 권한 추가 -->
     <insert id="insertUserRole" parameterType="string">
         /* insertUserRole sql*/

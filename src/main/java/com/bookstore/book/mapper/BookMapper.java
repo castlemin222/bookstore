@@ -12,4 +12,8 @@ public interface BookMapper {
 	public List<Map<String, Object>> getBookList(Map<String, Object> param);
 	// 도서 개수 조회
 	public int getTotalRows(Map<String, String> param);
+	// 도서 상세정보 조회
+	public Map<String, Object> getBookDetailByBookId(String bookId);
+	// 도서 리뷰 조회
+	public List<Map<String, Object>> getReviewList(String bookId);
 }

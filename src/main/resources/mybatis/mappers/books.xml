@@ -100,4 +100,39 @@
 			</when>
 		</choose>
 	</select>
+	
+	<select id="getBookDetailByBookId" parameterType="string" resultType="map">
+		/* getBookDetailByBookId sql */
+		SELECT 
+			BOOK_ID,
+			BOOK_TITLE,
+			BOOK_AUTHOR,
+			BOOK_PUBLISHER,
+			BOOK_PRICE,
+			BOOK_DISCOUNT_PRICE,
+			BOOK_STOCK,
+			BOOK_REVIEW_COUNT,
+			BOOK_REVIEW_SCORE,
+			BOOK_IMAGE,
+			BOOK_DESCRIPTION
+		FROM 
+			BOOKS
+		WHERE
+			BOOK_ID = #{value}
+	</select>
+	
+	<select id="getReviewList" parameterType="string" resultType="map">
+		/* getReviewList sql */
+		SELECT
+			R.REVIEW_ID,
+			R.REVIEW_CONTENT,
+			R.REVIEW_SCORE,
+			R.USER_ID,
+			U.USER_NAME
+		FROM
+			REVIEWS R, USERS U
+		WHERE
+			R.USER_ID = U.USER_ID
+			AND BOOK_ID = #{value}
+	</select>
 </mapper>

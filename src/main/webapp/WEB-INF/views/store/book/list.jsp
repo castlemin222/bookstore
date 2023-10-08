@@ -22,7 +22,7 @@
         <p>총 <span>${fn:length(bookList) }</span>건</p>
       </div>
       <div class="right">
-        <form action="/post/list" method="GET">
+        <form action="/book/list" method="GET">
           <div class="mr20">
             <select name="sort">
               <option value="recent">신상품순</option>

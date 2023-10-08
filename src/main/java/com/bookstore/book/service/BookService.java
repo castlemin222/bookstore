@@ -45,4 +45,13 @@ public class BookService {
 		return result;
 	};
 	
+	// 도서 상세정보 조회
+	public Map<String, Object> getBookDetailByBookId(String bookId) {
+		return bookMapper.getBookDetailByBookId(bookId);
+	}
+	
+	// 도서 리뷰 조회
+	public List<Map<String, Object>> getReviewList(String bookId) {
+		return bookMapper.getReviewList(bookId);
+	}
 }

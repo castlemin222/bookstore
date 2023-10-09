@@ -61,6 +61,7 @@
 			row_numbers between #{begin} and #{end}
 	</select>
 	
+	<!-- 도서 개수 조회 -->
 	<select id="getTotalRows" resultType="int">
 		SELECT 
 			count(*)
@@ -101,6 +102,7 @@
 		</choose>
 	</select>
 	
+	<!-- 도서 상세정보 조회 -->
 	<select id="getBookDetailByBookId" parameterType="string" resultType="map">
 		/* getBookDetailByBookId sql */
 		SELECT 
@@ -121,6 +123,7 @@
 			BOOK_ID = #{value}
 	</select>
 	
+	<!-- 도서 리뷰 조회 -->
 	<select id="getReviewList" parameterType="string" resultType="map">
 		/* getReviewList sql */
 		SELECT
@@ -128,6 +131,7 @@
 			R.REVIEW_CONTENT,
 			R.REVIEW_SCORE,
 			R.USER_ID,
+			R.BOOK_ID,
 			U.USER_NAME
 		FROM
 			REVIEWS R, USERS U
@@ -135,4 +139,11 @@
 			R.USER_ID = U.USER_ID
 			AND BOOK_ID = #{value}
 	</select>
+	
+	<!-- 리뷰 삭제 -->
+	<delete id="deleteReview" parameterType="string">
+		DELETE FROM REVIEWS
+		WHERE
+			REVIEW_ID = #{value}
+	</delete>
 </mapper>

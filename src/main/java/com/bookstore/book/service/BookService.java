@@ -8,12 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.bookstore.book.mapper.BookMapper;
 import com.bookstore.utils.Pagination;
 
 @Service
+@Transactional
 public class BookService {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
@@ -53,5 +54,15 @@ public class BookService {
 	// 도서 리뷰 조회
 	public List<Map<String, Object>> getReviewList(String bookId) {
 		return bookMapper.getReviewList(bookId);
+	}
+
+	// 리뷰 삭제
+	public void deleteReview(String reviewId) {
+		try {
+			bookMapper.deleteReview(reviewId);			
+		} catch (Exception e) {
+			log.info("리뷰 삭제도중 오류가 발생" + e.getMessage());
+		}
+		
 	}
 }

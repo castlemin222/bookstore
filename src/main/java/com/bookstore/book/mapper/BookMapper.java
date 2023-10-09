@@ -16,4 +16,6 @@ public interface BookMapper {
 	public Map<String, Object> getBookDetailByBookId(String bookId);
 	// 도서 리뷰 조회
 	public List<Map<String, Object>> getReviewList(String bookId);
+	// 리뷰 삭제
+	public void deleteReview(String reviewId);
 }

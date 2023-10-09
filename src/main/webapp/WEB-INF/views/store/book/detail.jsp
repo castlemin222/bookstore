@@ -78,7 +78,7 @@
 		                    <div class="reviewHeader">
 								<c:if test="${user eq review.USER_ID }">
 			                        <div class="w100 textRight">
-			                            <a href="/book/review/delete?id=${review.REVIEW_ID }" class="btnDeleteReview" >
+			                            <a href="/book/review/delete?reviewId=${review.REVIEW_ID }&bookId=${review.BOOK_ID }" class="btnDeleteReview" >
 			                                <img src="/resources/img/delete.png" alt="리뷰삭제">
 			                            </a>
 			                        </div>	

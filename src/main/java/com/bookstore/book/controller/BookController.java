@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,7 @@ import com.bookstore.security.vo.LoginUser;
 
 @Controller
 @RequestMapping("/book")
+@Transactional
 public class BookController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
@@ -41,6 +43,7 @@ public class BookController {
 		param.put("opt", opt);
 		param.put("keyword", keyword);
 		
+		// 도서 목록 조회
 		Map<String, Object> bookList = bookService.getBookList(param);
 		log.info("list controller : " + param);
 		model.addAttribute("paging", bookList.get("paging"));
@@ -50,9 +53,12 @@ public class BookController {
 		return "/store/book/list";
 	}
 	
+	// 도서 상세정보 페이지요청
 	@GetMapping("/detail")
 	public String detail(@AuthenticatedUser LoginUser loginUser, @RequestParam String bookId, Model model) {
+		// 도서 상세정보
 		Map<String , Object> detail = bookService.getBookDetailByBookId(bookId);
+		// 리뷰 목록
 		List<Map<String, Object>> reviewList = bookService.getReviewList(bookId);
 		
 		model.addAttribute("user", loginUser.getId());
@@ -61,4 +67,12 @@ public class BookController {
 		
 		return "/store/book/detail";
 	}
+	
+	// 리뷰 삭제
+	@GetMapping("/review/delete")
+	public String reviewDelete(String reviewId, String bookId) {
+		bookService.deleteReview(reviewId);
+		return "redirect:/book/detail?bookId="+bookId;
+	}
+	
 }

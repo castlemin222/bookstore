@@ -291,6 +291,57 @@
     width: 100%;
 }
 
+/* 리뷰 작성 팝업 */
+.popUpWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(170, 170, 170, 0.5);
+}
+.popUpWrap .popUp {
+    width: 500px;
+    height: 370px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.popUpWrap .popUpHeader{
+    padding: 10px 0;
+    background: #666adc;
+    color: #fff;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.popUpWrap .popUpBody {
+    padding: 10px 30px 10px 20px;
+}
+.popUpWrap .popUpBody .point {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+.popUpWrap .popUpBody .point img{
+    display: inline-block;
+    width: 70px;
+}
+.popUpWrap .popUpBody .point img:hover{
+    cursor: pointer;
+}
+.popUpWrap .popUpBody .content {
+    width: 100%;
+}
+.popUpWrap .popUpBody .content textarea{
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #555;
+}
+
 /* 장바구니 */
 .cartWrap .shoppingBtn {
     margin-top: 50px;

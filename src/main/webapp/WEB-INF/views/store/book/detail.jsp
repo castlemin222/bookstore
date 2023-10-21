@@ -21,7 +21,6 @@
   			$(".amount span").text(amount);
   		});
   		
-
   		$(".plus").click(function() {
   			var amount = $(".amount span").text();
   			amount = parseInt(amount) + 1;
@@ -31,6 +30,25 @@
   			}
   			$(".amount span").text(amount);
   		});
+  		
+  		$("#openPopUp").click(function() {
+  			$(".popUpWrap").show();
+  		});
+  		
+  		$("#closePopup").click(function() {
+  			$(".popUpWrap").hide();
+  		});
+  		
+  		$("#saveReview").click(function() {
+  			$("form").trigger("submit");
+  		});
+  		
+  		$(".popUpBody .point img").hover(function() {
+  			$(this).attr("src", "/resources/img/full_star.png");
+  			let index = $(this).index();
+  		}, function() {
+  			$(this).attr("src", "/resources/img/star.png");
+		});
   	})
   </script>
 </head>
@@ -73,6 +91,11 @@
            	<c:if test="${not empty reviewList }">
 	            <div class="reviewWrap">
 	                <p class="subTitle">review</p>
+					<sec:authorize access="isAuthenticated()">
+						<p>
+							<button type="button" id="openPopUp" class="btn secondBorderBtn">리뷰작성</button>
+						</p>
+					</sec:authorize>
 	                <c:forEach var="review" items="${reviewList }">
 		                <div class="reviewBox">
 		                    <div class="reviewHeader">
@@ -97,6 +120,31 @@
 	                </c:forEach>
 	            </div>
            	</c:if>
+           	
+           	<!-- 리뷰작성 팝업  -->
+	        <div class="popUpWrap" style="display: none;">
+	            <div class="popUp">
+	                <div class="popUpHeader">리뷰 작성</div>
+	                <div class="popUpBody">
+	                    <div class="point">
+	                        <img src="/resources/img/star.png" alt="별점이미지">
+	                        <img src="/resources/img/star.png" alt="별점이미지">
+	                        <img src="/resources/img/star.png" alt="별점이미지">
+	                        <img src="/resources/img/star.png" alt="별점이미지">
+	                        <img src="/resources/img/star.png" alt="별점이미지">
+	                    </div>
+	                    <div class="content">
+	                    	<form action="/book/add/review" method="post">
+	                        	<textarea name="reviewContent" id="reviewContent" cols="30" rows="10" class="w100"></textarea>
+	                        </form>
+	                    </div>
+	                </div>
+	                <div class="btnGroup">
+	                    <button type="button" id="closePopup" class="primaryBorderBtn mr10">취소</button>
+	                    <button type="button" id="saveReview" class="primaryBtn">저장</button>
+	                </div>
+	            </div>
+	        </div>
         </div>
     </section>
 

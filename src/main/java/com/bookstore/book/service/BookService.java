@@ -55,6 +55,15 @@ public class BookService {
 	public List<Map<String, Object>> getReviewList(String bookId) {
 		return bookMapper.getReviewList(bookId);
 	}
+	
+	// 리뷰 등록
+	public void addReview(Map<String, Object> param) {
+		try {
+			bookMapper.addReview(param);			
+		} catch (Exception e) {
+			log.info("리뷰 등록중 오류 발생" + e.getMessage());
+		}
+	}
 
 	// 리뷰 삭제
 	public void deleteReview(String reviewId) {
@@ -65,4 +74,5 @@ public class BookService {
 		}
 		
 	}
+
 }

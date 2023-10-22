@@ -43,12 +43,20 @@
   			$("form").trigger("submit");
   		});
   		
-  		$(".popUpBody .point img").hover(function() {
+  		/* $(".popUpBody .point img").hover(function() {
+  			$(this).prevAll().attr("src", "/resources/img/full_star.png");
   			$(this).attr("src", "/resources/img/full_star.png");
-  			let index = $(this).index();
   		}, function() {
-  			$(this).attr("src", "/resources/img/star.png");
-		});
+  			$(".popUpBody .point img").attr("src", "/resources/img/star.png");
+		}); */
+  		
+  		$(".popUpBody .point img").click(function() {
+  			$(".popUpBody .point img").attr("src", "/resources/img/star.png");
+  			$(this).prevAll().attr("src", "/resources/img/full_star.png");
+  			$(this).attr("src", "/resources/img/full_star.png");
+  			let scores = $(this).index() + 1;
+  			$("input[name='score']").val(scores);
+  		});
   	})
   </script>
 </head>
@@ -134,8 +142,10 @@
 	                        <img src="/resources/img/star.png" alt="별점이미지">
 	                    </div>
 	                    <div class="content">
-	                    	<form action="/book/add/review" method="post">
-	                        	<textarea name="reviewContent" id="reviewContent" cols="30" rows="10" class="w100"></textarea>
+	                    	<form action="/book/review/add" method="post">
+	                    		<input type="hidden" name="bookId" value="${detail.BOOK_ID }" />
+	                    		<input type="hidden" name="score" value="" />
+	                        	<textarea name="content" id="content" cols="30" rows="10" class="w100"></textarea>
 	                        </form>
 	                    </div>
 	                </div>

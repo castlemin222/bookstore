@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -66,6 +67,15 @@ public class BookController {
 		model.addAttribute("detail", detail);
 		
 		return "/store/book/detail";
+	}
+	
+	// 리뷰 등록
+	@PostMapping("/review/add")
+	public String reviewAdd(@RequestParam Map<String, Object> param, @AuthenticatedUser LoginUser loginUser) {
+		log.info("리뷰 등록 param"+param);
+		param.put("userId", loginUser.getId());
+		bookService.addReview(param);
+		return "redirect:/book/detail?bookId="+param.get("bookId");
 	}
 	
 	// 리뷰 삭제

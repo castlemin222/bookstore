@@ -139,7 +139,14 @@
 			R.USER_ID = U.USER_ID
 			AND BOOK_ID = #{value}
 	</select>
-	
+	<!-- 리뷰 등록 -->
+	<insert id="addReview">
+		/* INSERT REVIEWS sql */
+		INSERT INTO REVIEWS
+			(REVIEW_ID, REVIEW_CONTENT, REVIEW_SCORE, REVIEW_CREATED_DATE, REVIEW_UPDATED_DATE, BOOK_ID, USER_ID)
+		VALUES
+			(REVIEW_SEQ.NEXTVAL, #{content}, #{score}, SYSDATE, SYSDATE, #{bookId}, #{userId})
+	</insert>
 	<!-- 리뷰 삭제 -->
 	<delete id="deleteReview" parameterType="string">
 		DELETE FROM REVIEWS
